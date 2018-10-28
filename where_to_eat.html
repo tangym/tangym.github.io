@@ -1,0 +1,34 @@
+<html>
+<script type="text/javascript">
+places = {
+  "Big Bowl": 0,
+  "Fuji Jade Garden": 0,
+  "Kimchi": 0,
+  "Penang": 0,
+  "Little Food Court": 0,
+  "Little Szechuan": 0,
+  "Yummy Kitchen": 0,
+  "Kamrai": 0,
+  "Gold Bowl": 0,
+  "Xianglong": 0,
+  "Indian Pavilion": 0,
+  "Red Lobster": 0,
+  "Texas Roadhouse": 0,
+  "Keep fit": 0,
+};
+
+function insertPlace() {
+  // document.cookie = "abc=213;expires=Fri, 31 Dec 9999 23:59:59 GMT";
+  // document.write(document.cookie.length);
+  var keys = Object.keys(places);
+  var rand = Math.floor(Math.random()*keys.length);
+  document.getElementById("place").innerHTML = keys[rand];
+}
+</script>
+
+<body onload="insertPlace();">
+<div>Where To Eat?</div>
+<div id=place></div>
+</body>
+
+</html>
